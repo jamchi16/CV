@@ -3,233 +3,514 @@
 
 <head>
     <meta charset="utf-8">
-    <title>James Chin</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
-            integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
-            crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>James Chin — Platform &amp; DevSecOps Engineer</title>
+    <meta name="description"
+          content="Platform and DevSecOps engineer operating CI/CD, code quality, secrets, and observability infrastructure in a regulated banking environment.">
     <link rel="icon" href="favicon (1).ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-<div class="top-container">
-    <nav class="navbar navbar-custom navbar-expand-lg navbar-dark">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
-                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-nav" id="siteNav">
+    <div class="wrap nav-inner">
+        <a class="nav-mark" href="#top">
+            <span class="nav-mark-name">James Chin</span>
+            <span class="nav-mark-role">Platform &amp; DevSecOps</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navLinks"
+                aria-label="Open navigation">
+            <span></span><span></span><span></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="#about">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#specialties">Specialties</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#education">Education</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#certification">Certifications</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#work">Work Experience</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
-                </li>
+        <nav class="nav-links" id="navLinks" aria-label="Section navigation">
+            <a href="#work">Work</a>
+            <a href="#capabilities">Capabilities</a>
+            <a href="#experience">Experience</a>
+            <a href="#credentials">Credentials</a>
+            <a class="nav-cta" href="#contact">Get in touch</a>
+        </nav>
+    </div>
+</header>
+
+<main id="main">
+
+    <section class="hero" id="top">
+        <div class="wrap hero-inner">
+
+            <p class="eyebrow">Baltimore, Maryland</p>
+
+            <h1 class="hero-title">
+                I build the pipelines<br>
+                <em>other engineers ship through.</em>
+            </h1>
+
+            <p class="hero-lede">
+                Platform and DevSecOps engineer running CI/CD, code quality, secrets, and observability
+                infrastructure for roughly 350 users across 10&ndash;15 application teams &mdash; in a regulated
+                banking environment where every change is defended at a change advisory board.
+            </p>
+
+            <div class="hero-actions">
+                <a class="btn btn-primary" href="#work">See selected work</a>
+                <a class="btn btn-ghost" href="mailto:jamesvchin@gmail.com">jamesvchin@gmail.com</a>
+            </div>
+
+            <figure class="pipeline" aria-label="Diagram of an automated container image remediation pipeline">
+                <figcaption class="pipeline-caption">
+                    <span class="pipeline-caption-label">Automated container image remediation</span>
+                    <span class="pipeline-caption-meta">runs weekly &middot; 10 images &middot; 2&ndash;3 weeks &rarr; under 1 week</span>
+                </figcaption>
+
+                <ol class="pipeline-track">
+                    <li class="stage" style="--i:0">
+                        <span class="stage-dot"></span>
+                        <span class="stage-name">Detect base SHA</span>
+                        <span class="stage-meta">Red Hat</span>
+                    </li>
+                    <li class="stage" style="--i:1">
+                        <span class="stage-dot"></span>
+                        <span class="stage-name">Resolve manifest</span>
+                        <span class="stage-meta">deps + tooling</span>
+                    </li>
+                    <li class="stage" style="--i:2">
+                        <span class="stage-dot"></span>
+                        <span class="stage-name">Edit Containerfile</span>
+                        <span class="stage-meta">automated</span>
+                    </li>
+                    <li class="stage" style="--i:3">
+                        <span class="stage-dot"></span>
+                        <span class="stage-name">Build</span>
+                        <span class="stage-meta">OpenShift</span>
+                    </li>
+                    <li class="stage" style="--i:4">
+                        <span class="stage-dot"></span>
+                        <span class="stage-name">Scan</span>
+                        <span class="stage-meta">Grype</span>
+                    </li>
+                    <li class="stage stage-gate" style="--i:5">
+                        <span class="stage-dot"></span>
+                        <span class="stage-name">Human approval</span>
+                        <span class="stage-meta">pull request</span>
+                    </li>
+                    <li class="stage" style="--i:6">
+                        <span class="stage-dot"></span>
+                        <span class="stage-name">Publish</span>
+                        <span class="stage-meta">Quay</span>
+                    </li>
+                </ol>
+            </figure>
+        </div>
+    </section>
+
+    <section class="metrics" aria-label="Scale of platforms operated">
+        <div class="wrap metrics-grid">
+            <div class="metric">
+                <span class="metric-value">260</span>
+                <span class="metric-label">SonarQube projects in production</span>
+            </div>
+            <div class="metric">
+                <span class="metric-value">~350</span>
+                <span class="metric-label">platform users and service accounts</span>
+            </div>
+            <div class="metric">
+                <span class="metric-value">~2,000</span>
+                <span class="metric-label">Bitbucket repositories</span>
+            </div>
+            <div class="metric">
+                <span class="metric-value">~2 TB</span>
+                <span class="metric-label">Splunk ingest per day</span>
+            </div>
+            <div class="metric">
+                <span class="metric-value">23</span>
+                <span class="metric-label">change controls defended at CAB</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="about">
+        <div class="wrap about-grid">
+            <div class="about-portrait">
+                <img src="images/prof-modified.png" alt="" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="about-body">
+                <p class="section-eyebrow">About</p>
+                <h2 class="section-title">Infrastructure people depend on, built by someone who also ships the apps.</h2>
+                <p>
+                    I operate the shared services development teams rely on every day &mdash; Jenkins Operations
+                    Center and controllers across three environments, SonarQube Enterprise, and Bitbucket &mdash;
+                    and I automate the operational work around them with Ansible, Groovy, and Python.
+                </p>
+                <p>
+                    The other half of my work is application development: Angular and Django products spanning
+                    graph analytics, financial forecasting, and natural language processing. Writing the software
+                    that runs on a platform changes how you design the platform. It is why I care about self-service
+                    over ticket queues, and why the remediation pipeline above stops for a human instead of merging
+                    on its own.
+                </p>
+                <p class="about-note">
+                    Currently open to platform engineering, DevSecOps, and developer experience roles.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt" id="work">
+        <div class="wrap">
+            <p class="section-eyebrow">Selected work</p>
+            <h2 class="section-title">Six things worth reading about.</h2>
+
+            <div class="work-grid">
+
+                <article class="card card-feature">
+                    <h3 class="card-title">Automated container vulnerability remediation</h3>
+                    <p class="card-body">
+                        Built a Jenkins pipeline that checks weekly for new Red Hat base image SHAs, resolves
+                        dependency and tooling versions from an application manifest, rewrites the Containerfile,
+                        builds in OpenShift, and scans with Grype &mdash; raising a pull request only when no high
+                        or critical findings remain. Merge approval triggers publication to Quay.
+                    </p>
+                    <p class="card-result">
+                        <span class="result-flag">Result</span>
+                        Remediation turnaround fell from 2&ndash;3 weeks to under one week across 10 enterprise images,
+                        against SLAs of 7 days for critical, 30 for high, and 60 for medium findings.
+                    </p>
+                    <ul class="tag-row">
+                        <li>Jenkins</li><li>Grype</li><li>OpenShift</li><li>Quay</li><li>Red Hat ACS</li><li>Groovy</li>
+                    </ul>
+                </article>
+
+                <article class="card">
+                    <h3 class="card-title">SonarQube Enterprise upgrade and database migration</h3>
+                    <p class="card-body">
+                        Led the Community-to-Enterprise upgrade for a platform carrying 260 active projects, then
+                        migrated its database from a PostgreSQL pod PVC to a dedicated MSSQL server. Coordinated
+                        DBA and OpenShift cluster-admin teams through the production change window.
+                    </p>
+                    <p class="card-result">
+                        <span class="result-flag">Result</span>
+                        Roughly 30 minutes of downtime, achieved by rehearsing the full runbook in a personal lab,
+                        then dev, then test before touching production.
+                    </p>
+                    <ul class="tag-row">
+                        <li>SonarQube</li><li>MSSQL</li><li>PostgreSQL</li><li>OpenShift</li><li>Change control</li>
+                    </ul>
+                </article>
+
+                <article class="card">
+                    <h3 class="card-title">Secrets out of Git, into a broker</h3>
+                    <p class="card-body">
+                        Implemented External Secrets Operator in OpenShift to populate secrets from BeyondTrust
+                        Secrets Safe under namespace-scoped RBAC. Extended the same pattern to Splunk, where a
+                        single bootstrap credential brokers API access for per-source audit log tokens.
+                    </p>
+                    <p class="card-result">
+                        <span class="result-flag">Result</span>
+                        Replaced hardcoded credentials committed to Git repositories with brokered, revocable access.
+                    </p>
+                    <ul class="tag-row">
+                        <li>External Secrets Operator</li><li>BeyondTrust</li><li>RBAC</li><li>OpenShift</li>
+                    </ul>
+                </article>
+
+                <article class="card">
+                    <h3 class="card-title">Least-privilege access, delivered as self-service</h3>
+                    <p class="card-body">
+                        Refactored a SonarQube platform from organization-wide visibility &mdash; every user could
+                        see every project &mdash; to scoped permissions, in response to a risk I identified. Access
+                        changes now run through Jenkins pipelines triggered by Jira Service Management forms with
+                        approval routing built in.
+                    </p>
+                    <p class="card-result">
+                        <span class="result-flag">Result</span>
+                        All 260 projects moved to least privilege without adding a ticket queue for the platform team.
+                    </p>
+                    <ul class="tag-row">
+                        <li>SonarQube</li><li>Jenkins</li><li>Jira Service Management</li><li>Least privilege</li>
+                    </ul>
+                </article>
+
+                <article class="card">
+                    <h3 class="card-title">Chef upgrades, from tribal knowledge to a playbook</h3>
+                    <p class="card-body">
+                        Wrote an Ansible playbook automating upgrades across Chef Infra Server, Supermarket, and
+                        Automate for a 200-node estate. The previous process was manual, undocumented, and
+                        different every time someone ran it.
+                    </p>
+                    <p class="card-result">
+                        <span class="result-flag">Result</span>
+                        One to two hours per server became a repeatable 15-minute run covering all three components,
+                        including validation.
+                    </p>
+                    <ul class="tag-row">
+                        <li>Ansible</li><li>Chef Infra</li><li>Chef Automate</li><li>Supermarket</li>
+                    </ul>
+                </article>
+
+                <article class="card">
+                    <h3 class="card-title">Entity graphs from unstructured web text</h3>
+                    <p class="card-body">
+                        Built an Angular and Django application that integrates the Google Search API, extracts
+                        content from the top ~50 result URLs, and applies spaCy named entity recognition to resolve
+                        entities into graph nodes. Relationships are modeled in Neo4j and analyzed with Graph Data
+                        Science algorithms.
+                    </p>
+                    <p class="card-result">
+                        <span class="result-flag">Result</span>
+                        Results render as interactive 3D globe visualizations, geolocating entities to real-world
+                        coordinates wherever location could be resolved.
+                    </p>
+                    <ul class="tag-row">
+                        <li>spaCy</li><li>Neo4j GDS</li><li>Django</li><li>Angular</li><li>Azure</li>
+                    </ul>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="capabilities">
+        <div class="wrap">
+            <p class="section-eyebrow">Capabilities</p>
+            <h2 class="section-title">What I work with.</h2>
+
+            <dl class="cap-list">
+                <div class="cap-row">
+                    <dt>Platform engineering</dt>
+                    <dd>Jenkins Operations Center &amp; controllers &middot; agent images &amp; OpenShift pod templates
+                        &middot; SonarQube Enterprise &middot; Bitbucket &middot; GitHub Enterprise &middot; GitLab
+                        &middot; Nexus
+                    </dd>
+                </div>
+                <div class="cap-row">
+                    <dt>DevSecOps</dt>
+                    <dd>Red Hat Advanced Cluster Security &middot; Grype &middot; Gitleaks &middot; OWASP ZAP
+                        &middot; Tenable &middot; GitLab SAST &amp; dependency scanning &middot; quality gates
+                    </dd>
+                </div>
+                <div class="cap-row">
+                    <dt>Secrets &amp; access</dt>
+                    <dd>BeyondTrust Secrets Safe &middot; External Secrets Operator &middot; namespace-scoped RBAC
+                        &middot; least-privilege design
+                    </dd>
+                </div>
+                <div class="cap-row">
+                    <dt>Automation</dt>
+                    <dd>Ansible &middot; Chef (Infra Server, Supermarket, Automate) &middot; Groovy &middot; Python
+                        &middot; BASH &middot; PowerShell &middot; YAML
+                    </dd>
+                </div>
+                <div class="cap-row">
+                    <dt>Containers &amp; delivery</dt>
+                    <dd>Red Hat OpenShift &middot; Kubernetes &middot; Podman / Docker &middot; Quay &middot; Helm
+                        &middot; ArgoCD &middot; Microsoft Azure &middot; Heroku
+                    </dd>
+                </div>
+                <div class="cap-row">
+                    <dt>Observability</dt>
+                    <dd>Splunk (scripted Technology Add-on development) &middot; Prometheus / PromQL &middot; Grafana
+                    </dd>
+                </div>
+                <div class="cap-row">
+                    <dt>Application development</dt>
+                    <dd>Python &middot; Django &middot; Angular &middot; TypeScript &middot; Streamlit &middot; spaCy
+                        &middot; Neo4j &amp; Graph Data Science &middot; PostgreSQL &middot; MSSQL &middot; MongoDB
+                        &middot; Selenium
+                    </dd>
+                </div>
+            </dl>
+        </div>
+    </section>
+
+    <section class="section section-alt" id="experience">
+        <div class="wrap">
+            <p class="section-eyebrow">Experience</p>
+            <h2 class="section-title">Consulting across three concurrent engagements.</h2>
+
+            <div class="role">
+                <div class="role-head">
+                    <h3 class="role-title">IT Automation Consultant</h3>
+                    <p class="role-org">5.15 Technologies &middot; Lancaster, PA</p>
+                    <p class="role-dates">August 2023 &ndash; Present</p>
+                </div>
+
+                <div class="engagements">
+                    <article class="engagement">
+                        <header>
+                            <h4>Financial services client</h4>
+                            <span class="engagement-dates">Aug 2023 &ndash; Present</span>
+                        </header>
+                        <p>
+                            Platform engineering and DevSecOps for a bank. Jenkins, SonarQube, and Bitbucket
+                            estates across dev, test, and production; container vulnerability remediation;
+                            secrets brokering; Splunk audit log ingestion; Prometheus and Grafana monitoring
+                            across three OpenShift clusters. Also built the datacenter management module
+                            (Neo4j cable path tracing), a budgeting and forecasting module, and the integration
+                            layer for an internal platform monitoring application.
+                        </p>
+                    </article>
+
+                    <article class="engagement">
+                        <header>
+                            <h4>Grid analytics client</h4>
+                            <span class="engagement-dates">Summer 2024 &ndash; Summer 2025</span>
+                        </header>
+                        <p>
+                            Angular and Django application ingesting electrical grid data to optimize datacenter
+                            siting and construction planning. Built project management, statistical analysis,
+                            charting, and 2D/3D visualization features. Delivered through GitLab CI with SAST,
+                            dependency scanning, and unit testing; migrated deployment from Heroku to Azure VMs.
+                        </p>
+                    </article>
+
+                    <article class="engagement">
+                        <header>
+                            <h4>NLP &amp; graph analytics client</h4>
+                            <span class="engagement-dates">Summer 2024 &ndash; Early 2025</span>
+                        </header>
+                        <p>
+                            Entity extraction and relationship graphing over unstructured web text using spaCy
+                            named entity recognition, modeled in Neo4j with Graph Data Science algorithms and
+                            rendered as interactive 3D globe visualizations. Hosted on Azure.
+                        </p>
+                    </article>
+
+                    <article class="engagement">
+                        <header>
+                            <h4>Internal product development</h4>
+                            <span class="engagement-dates">2023 &ndash; Present</span>
+                        </header>
+                        <p>
+                            End-to-end Selenium test suites for a Django work item management application,
+                            backend endpoints for a PTO tracking application, and OWASP ZAP DAST integrated
+                            as a GitLab CI pipeline stage.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="credentials">
+        <div class="wrap cred-grid">
+
+            <div class="cred-col">
+                <p class="section-eyebrow">Certifications</p>
+                <ul class="cred-list">
+                    <li>
+                        <span class="cred-name">Splunk Core Certified Power User</span>
+                        <span class="cred-meta">Splunk &middot; November 2025</span>
+                    </li>
+                    <li>
+                        <span class="cred-name">Microsoft Certified: Azure Fundamentals (AZ&#8209;900)</span>
+                        <span class="cred-meta">Microsoft &middot; August 2022</span>
+                    </li>
+                    <li>
+                        <span class="cred-name">AWS Certified Cloud Practitioner</span>
+                        <span class="cred-meta">Amazon Web Services &middot; August 2022</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="cred-col">
+                <p class="section-eyebrow">Education</p>
+                <ul class="cred-list">
+                    <li>
+                        <span class="cred-name">Bachelor of Arts in Chemistry, minor in Biology</span>
+                        <span class="cred-meta">Southern Adventist University &middot; Collegedale, TN &middot; 2016&ndash;2020 &middot; GPA 3.9</span>
+                    </li>
+                    <li>
+                        <span class="cred-name">Loma Linda University School of Medicine</span>
+                        <span class="cred-meta">July 2020 &ndash; February 2023 &middot; Completed all courses and exams prior to elective withdrawal</span>
+                    </li>
+                </ul>
+
+                <p class="section-eyebrow cred-spacer">Outside work</p>
+                <p class="cred-aside">
+                    Freshwater and saltwater aquariums. Competitive Pok&eacute;mon VGC, previously top 300
+                    worldwide. Classical piano, with a few competition wins behind me.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="wrap contact-inner">
+            <p class="section-eyebrow contact-eyebrow">Get in touch</p>
+            <h2 class="contact-title">Open to platform, DevSecOps,<br>and developer experience roles.</h2>
+            <p class="contact-lede">
+                Based in Baltimore, Maryland. Happy to talk through any of the work above in detail.
+            </p>
+            <a class="btn btn-primary btn-lg" href="mailto:jamesvchin@gmail.com">jamesvchin@gmail.com</a>
+
+            <ul class="contact-links">
+                <li><a href="https://www.linkedin.com/in/james-chin-657259248/">LinkedIn</a></li>
+                <li><a href="https://github.com/jamchi16?tab=repositories">GitHub</a></li>
+                <li><a href="tel:+17065068566">706&nbsp;506&nbsp;8566</a></li>
             </ul>
         </div>
-    </nav>
-    <div class="title-container">
-        <div class="title-message-container">
-            <h1>Hi, I'm James</h1>
-            <h2>Here to provide you with web development and cloud-based services.</h2>
-        </div>
+    </section>
 
-        <img class="mountain" src="images/mountain.gif" alt="">
+</main>
+
+<footer class="site-footer">
+    <div class="wrap footer-inner">
+        <span class="footer-mark">James Chin</span>
+        <span class="footer-copy">&copy; <span id="year">2026</span></span>
     </div>
+</footer>
 
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-</div>
-<div id='about' class="middle-container">
-    <div class="profile">
-        <img src="images/prof-modified.png" alt="">
-        <h2>Welcome!</h2>
-        <p>I am an aspiring cloud and web solutions provider.</p>
-    </div>
-    <hr>
-    <div class="about-container">
-        <h2>About Me</h2>
-        <p class="about-text">Experienced IT Automation Consultant with
-            expertise in full stack development and
-            automation. Specialized in creating
-            responsive applications using Django and
-            Angular and database management (SQL,
-            MongoDB, Neo4J). Managed cloud
-            deployments (Azure, Heroku) using
-            automated, Dockerized workflows.
-            Proficient in integrating AI, machine
-            learning, natural language processing, and
-            graph data science to enhance
-            application intelligence. Extensive
-            experience in building automated testing
-            frameworks.</p>
+    (function () {
+        var toggle = document.querySelector('.nav-toggle');
+        var links = document.getElementById('navLinks');
+        if (!toggle || !links) return;
+        toggle.addEventListener('click', function () {
+            var open = links.classList.toggle('is-open');
+            toggle.setAttribute('aria-expanded', String(open));
+            toggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+        });
+        links.addEventListener('click', function (e) {
+            if (e.target.tagName === 'A') {
+                links.classList.remove('is-open');
+                toggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+    })();
 
-    </div>
+    (function () {
+        var nav = document.getElementById('siteNav');
+        if (!nav) return;
+        var onScroll = function () { nav.classList.toggle('is-stuck', window.scrollY > 24); };
+        window.addEventListener('scroll', onScroll, {passive: true});
+        onScroll();
+    })();
 
-    <hr>
-    <div id='certification' class="certification-container">
-        <h2>Certifications</h2>
-        <p>
-            Microsoft Certified: Azure Fundamentals | Issued: August 2022</p>
-        <p>AWS Certified Cloud Practitioner | Expected Issued: August 2022 </p>
-        <p>
-            AZ 104 Microsoft Azure Administrator | Expected Completion: December 2024
-        </p>
-    </div>
-    <hr>
-    <div id='specialties' class="skills">
-        <h2>My Specialties.</h2>
-        <div class="skill-row-right">
-            <img class="cpu" src="images/movecloud.gif" alt="">
-            <h3>Cloud Providers</h3>
-            <p>Microsoft Azure | Amazon AWS | Heroku</p>
-        </div>
-        <div class="skill-row-left">
-            <img class="pkmn" src="images/cpu.gif" alt="">
-            <h3>Programming Languages</h3>
-            <p>HTML | CSS | JavaScript | Python | JavaScript | TypeScript | YAML | Groovy | Bash | PowerShell</p>
-        </div>
-        <div class="skill-row-right">
-            <img class="cpu" src="images/tools.gif" alt="">
-            <h3>Tools</h3>
-            <p>Git | Jenkins | Docker | Terraform | Kubernetes | Webstorm | Pycharm | Visual Studio | Microsoft Word |
-                Excel | PowerPoint</p>
-        </div>
-        <div class="skill-row-left">
-            <img class="pkmn" src="images/web-dev-gif.gif" alt="">
-            <h3>Frameworks</h3>
-            <p>Django | Angular | Flask</p>
-        </div>
-        <div class="skill-row-right">
-            <img class="cpu" src="images/SQL.gif" alt="">
-            <h3>Databases</h3>
-            <p>SQL | MongoDB | Neo4J</p>
-        </div>
-        <div class="skill-row-left">
-            <img class="pkmn" src="images/profcpu.gif" alt="">
-            <h3>Professional Skills</h3>
-            <p>Cloud Architecture | Product Management | Portfolio Strategy | Business Development | SaaS | Software
-                Engineering | Web Development </p>
-        </div>
-        <div class="skill-row-right">
-            <img class="cpu" src="images/domain.gif" alt="">
-            <h3>Domain Knowledge</h3>
-            <p>Database Management | Cloud Technologies | CI/CD | Application Security</p>
-        </div>
-        <div class="skill-row-left">
-            <img class="pkmn" src="images/project.gif" alt="">
-            <h3>Projects</h3>
-            <p><a href="https://github.com/jamchi16?tab=repositories">Github Repository</a> | Personal Projects.</p>
-        </div>
-    </div>
-
-    <hr>
-
-
-    <div id='education' class="education-container">
-        <h2>Education</h2>
-        <p>
-
-            Southern Adventist University August 2016-May 2020 | Bachelor of Arts in Chemistry with a minor in
-            Biology </p>
-        <p>
-            Loma Linda University School of Medicine August 2020-July 2022
-        </p>
-
-    </div>
-
-    <hr>
-
-    <div id='work' class="work-container">
-        <h2>Work Experience</h2>
-        <table class="work-table">
-            <tr>
-                <td>
-                    <h3>5.15 Technologies</h3>
-                </td>
-                <td>
-                    <h3>Southern Adventist University</h3>
-                </td>
-                <td>
-                    <h3>Georgia-Cumberland Academy</h3>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <ul>
-                        <li>IT Automation Consultant | Accepted Position July 2023</li>
-                    </ul>
-                </td>
-                <td>
-                    <ul>
-                        <li>Landscape Services June 2016-March 2020 | Part-Time</li>
-                        <li>Laboratory Professor's Assistant August 2016-December 2016 | Part-Time</li>
-                        <li>Professor's Assistant January 2017-March 2020 | Part-Time</li>
-                </td>
-                <td>
-                    <ul>
-                        <li>IT Specialist June 2012-May 2013 | Part-Time</li>
-                    </ul>
-                </td>
-            </tr>
-        </table>
-    </div>
-
-    <hr>
-
-    <div class="skill-row-right">
-        <img class="cpu" src="images/fish.gif" alt="">
-        <h3>Hobbies</h3>
-        <p>Fresh & Saltwater Aquarium Hobbyist | Pokemon Enthusiast | Playing & Watching Sports | Pianist</p>
-    </div>
-    <div class="skill-row-left">
-        <img class="pkmn" src="images/pkmn.gif" alt="">
-        <h3>Recreational Achievements</h3>
-        <p>Previous Top 300 Worldwide Pokemon VGC Player | Top 1.5% in NA Region Super Smash Bros. Player | Winner of
-            Several Piano Competitions</p>
-    </div>
-
-    <div class="contact-me">
-        <h2>Get In Touch</h2>
-        <h3>Feel free to contact me using any of the below methods</h3>
-        <p>Thanks for visiting! I hope to meet you soon!</p>
-        <hr>
-        <a class="btn" href="mailto:jamesvchin@gmail.com">CONTACT ME</a>
-    </div>
-</div>
-
-
-<div id='contact' class="bottom-container">
-    <a class="footer-link" href="https://www.linkedin.com/in/james-chin-657259248/"><img alt="linkedin"
-                                                                                         src="images/linkedin.png"
-                                                                                         width="30" height="30"></a>
-    <a class="footer-link" href="https://www.instagram.com/jamchi16/"><img alt="instagram" src="images/instagram.png"
-                                                                           width="30" height="30"></a>
-    <a class="footer-link" href="https://www.youtube.com/channel/UCvR6kWe0ksAMXC-_sOsUhXQ"><img alt="youtube"
-                                                                                                src="images/youtube.png"
-                                                                                                width="30" height="30"></a>
-    <p class="copyright mt-2 mb-0">© James Chin.</p>
-</div>
-
+    (function () {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        if (!('IntersectionObserver' in window)) return;
+        var targets = document.querySelectorAll('.card, .cap-row, .engagement, .metric');
+        targets.forEach(function (el) { el.classList.add('reveal'); });
+        var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    io.unobserve(entry.target);
+                }
+            });
+        }, {rootMargin: '0px 0px -10% 0px', threshold: 0.1});
+        targets.forEach(function (el) { io.observe(el); });
+    })();
+</script>
 
 </body>
-
 </html>
